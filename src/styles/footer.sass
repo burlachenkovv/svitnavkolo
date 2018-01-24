@@ -1,0 +1,63 @@
+.contacts
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  a
+    color: #fff;
+  &__left
+    width: 300px;
+    min-height: 355px;
+    text-align: left;
+    border-right: 1px dashed #ccc;
+  &__left ul
+    padding: 0;
+  &__left li
+    margin-left: 0;
+    margin-bottom: 20px;
+    position: relative;
+    list-style-type: none;
+    padding: 0 0 0 35px;
+    line-height: 25px;
+  &__left li::before
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+  &__right
+    width: 580px;
+    min-height: 355px;
+    vertical-align: top;
+  &__right input,
+  &__right textarea
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: 0;
+    border-radius: 3px;
+  &__right input[type="button"]
+    display: inline-block;
+    width: 200px;
+    padding: 15px 35px;
+    margin: 10px 0;
+    border: 1px solid #f4645a;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+
+.phone::before
+  background-image: url("../img/icons/phone.png");
+.skype::before
+  background-image: url("../img/icons/skype.png");
+.email::before
+  background-image: url("../img/icons/email.png");
+.whatsapp::before
+  background-image: url("../img/icons/whatsapp.png");
+.viber::before
+  background-image: url("../img/icons/viber.png");
+.facetime::before
+  background-image: url("../img/icons/facetime.png");
+

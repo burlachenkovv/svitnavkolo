@@ -1,0 +1,109 @@
+.main
+  text-align: center;
+  &__items
+    margin-bottom: 40px;
+  &__item
+    width: 300px;
+    padding: 15px;
+    margin: 20px 0 0 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    h3
+      line-height: 1.5em;
+    a
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 10px 0;
+      border: 1px solid #f4645a;
+      border-radius: 30px;
+  &__description
+    margin: 50px 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+    h2
+      line-height: 1.5em;
+      border: none;
+    img
+      opacity: 0.1;
+      transition-property: opacity;
+      transition-duration: 1.5s;
+  &__description:nth-child(odd)
+    text-align: left; 
+  &__description:nth-child(even)
+    text-align: right;
+    .main__image
+      order: 1;
+  &__description::after
+    content: "";
+    display: block;
+    clear: both;
+  &__image
+    width: 310px;
+  &__text
+    vertical-align: top;
+  &__text
+    max-width: 600px;
+    align-self: flex-start;
+  ul
+    padding: 0;
+  ul li
+    list-style-type: none;    
+    margin-bottom: 10px;
+    font-size: 0.9em;
+
+img.visible
+  opacity: 1;
+
+h3.price
+  font-size: 1.6em;
+  padding-bottom: 7px;
+  border-bottom: 1px dashed #ccc;
+
+.animation
+  position: relative;
+  min-height: 170px;
+  background-image: url("../img/animation-bg4.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  &__items
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+  &__item
+    padding: 20px 0;
+    width: 20%;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  h2
+    font-size: 2.5em;
+    line-height: 1.3em;
+
+.portfolio
+  text-align: center;
+  &__items
+     margin: 20px 0 0 0;
+  &__item
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  &__item a:hover
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 55px inset;
+    position: relative;
+  &__item img
+    display: block;
+    z-index: -100;
+    position: relative;
+  a
+    border: 0;
+
+.clients img
+  display: block;
+  margin: 20px 30px;

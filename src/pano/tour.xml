@@ -1,0 +1,61 @@
+<krpano version="1.18">
+
+	<contextmenu>
+	<item caption="Сделано в Svit-Navkolo.com" onclick="openurl('http://svit-navkolo.com/',  _blank)" />
+	<item caption=" " onclick="" />
+	</contextmenu>
+	
+<autorotate enabled="true"
+waittime="0"
+accel="1.0"
+speed="4.0"
+horizon="0"
+tofov="off"
+/>
+
+	<!-- set skin settings: bingmaps? gyro? thumbnails? tooltips? -->
+	<skin_settings maps="false"
+	               maps_type="bing"
+	               maps_bing_api_key=""
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="true"
+	               thumbs_scrollbuttons="true"
+	               thumbs_scrollindicator="true"
+	               thumbs_loop="true"
+	               tooltips_thumbs="true"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="true"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="BLEND(0.5)"
+	               controlbar_offset="20"
+	               />
+
+	<!-- set optional skin logo url -->
+
+		<view hlookat="140" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="0" fovmin="120" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano1-2411.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512">
+			<level tiledimagewidth="3184" tiledimageheight="3184">
+				<cube url="panos/pano1-2411.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1536" tiledimageheight="1536">
+				<cube url="panos/pano1-2411.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="768" tiledimageheight="768">
+				<cube url="panos/pano1-2411.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano1-2411.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+</krpano>

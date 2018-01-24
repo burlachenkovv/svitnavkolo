@@ -1,0 +1,76 @@
+<header class="header">
+	<div id="topnav" class="header__line">
+		<div class="header__container container flex">
+			<img src="./img/logo.png" alt="Виртуальные туры" />
+
+			<nav class="header__nav">
+				<ul>
+					<li><a href="#">Наши преимущества</a></li>
+					<li><a href="#">Цены</a></li>
+					<li><a href="#">Портфолио</a></li>
+					<li><a href="#">Наши клиенты</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+
+			<div class="header__mobile">
+				<a href="javascript:void(0);" onclick="showMobile(true);" id="header__mobile__open">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+
+				<a href="javascript:void(0);" onclick="showMobile(false);" id="header__mobile__close">X</a>
+
+				<nav id="header__mobile__nav">
+					<ul>
+						<li><a href="#">Наши преимущества</a></li>
+						<li><a href="#">Цены</a></li>
+						<li><a href="#">Портфолио</a></li>
+						<li><a href="#">Наши клиенты</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="header__container container" id="header__text">
+		<div class="header__description">
+			<h2>Съемка 3D панорам и создание виртуальных туров</h2>
+			<br>
+			<p>Съемка и создание 3д панорам и современных виртуальных туров с обзором 360° и с размещением панорам интерьеров на Goоgle картах и вашем сайте. Svit Navkolo - сертифицированный фотограф Google Street View (Google Просмотр улиц).</p>
+		</div>
+	</div>
+
+	<div id="pano" style="width:100%;height:470px;position: absolute;top:0;">
+		<noscript>
+			<table style="width:100%;height:100%;">
+				<tr style="vertical-align:middle;">
+					<td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated</div></td>
+				</tr>
+			</table>
+		</noscript>
+		<script>
+			let swfPath = "./pano/tour.swf";
+			let xmlPath = "./pano/tour.xml";
+
+			embedpano({
+				swf: swfPath,
+				xml: xmlPath,
+				target:"pano",
+				html5:"always",
+				passQueryParameters:true
+			});
+		</script>
+	</div>
+</header>
+
+<!--
+<div class="header">
+    <img src="./img/header-top.png" class="header__line" alt="">
+    <div class="header__container">
+        <img src="./img/bosh.png" class="header__logo" alt="">
+    </div>
+</div>
+-->

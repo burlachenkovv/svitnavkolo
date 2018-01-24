@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <title>Svit Navkolo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/animation/jquery.viewportchecker.js"></script>
+    <script src="./js/animation/counters.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./pano/tour.js"></script>
+
+</head>
+<body>
+    <header class="header">
+    	<div id="topnav" class="header__line">
+    		<div class="header__container container flex">
+    			<img src="./img/logo.png" alt="Виртуальные туры" />
+    
+    			<nav class="header__nav">
+    				<ul>
+    					<li><a href="#">Наши преимущества</a></li>
+    					<li><a href="#">Цены</a></li>
+    					<li><a href="#">Портфолио</a></li>
+    					<li><a href="#">Наши клиенты</a></li>
+    					<li><a href="#">Контакты</a></li>
+    				</ul>
+    			</nav>
+    
+    			<div class="header__mobile">
+    				<a href="javascript:void(0);" onclick="showMobile(true);" id="header__mobile__open">
+    					<span></span>
+    					<span></span>
+    					<span></span>
+    				</a>
+    
+    				<a href="javascript:void(0);" onclick="showMobile(false);" id="header__mobile__close">X</a>
+    
+    				<nav id="header__mobile__nav">
+    					<ul>
+    						<li><a href="#">Наши преимущества</a></li>
+    						<li><a href="#">Цены</a></li>
+    						<li><a href="#">Портфолио</a></li>
+    						<li><a href="#">Наши клиенты</a></li>
+    						<li><a href="#">Контакты</a></li>
+    					</ul>
+    				</nav>
+    			</div>
+    		</div>
+    	</div>
+    
+    	<div class="header__container container" id="header__text">
+    		<div class="header__description">
+    			<h2>Съемка 3D панорам и создание виртуальных туров</h2>
+    			<br>
+    			<p>Съемка и создание 3д панорам и современных виртуальных туров с обзором 360° и с размещением панорам интерьеров на Goоgle картах и вашем сайте. Svit Navkolo - сертифицированный фотограф Google Street View (Google Просмотр улиц).</p>
+    		</div>
+    	</div>
+    
+    	<div id="pano" style="width:100%;height:470px;position: absolute;top:0;">
+    		<noscript>
+    			<table style="width:100%;height:100%;">
+    				<tr style="vertical-align:middle;">
+    					<td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated</div></td>
+    				</tr>
+    			</table>
+    		</noscript>
+    		<script>
+    			let swfPath = "./pano/tour.swf";
+    			let xmlPath = "./pano/tour.xml";
+    
+    			embedpano({
+    				swf: swfPath,
+    				xml: xmlPath,
+    				target:"pano",
+    				html5:"always",
+    				passQueryParameters:true
+    			});
+    		</script>
+    	</div>
+    </header>
+    
+    <!--
+    <div class="header">
+        <img src="./img/header-top.png" class="header__line" alt="">
+        <div class="header__container">
+            <img src="./img/bosh.png" class="header__logo" alt="">
+        </div>
+    </div>
+    -->
+
+
+    <section class="main container">
+        <h2>Наши преимущества</h2>
+
+        <div class="main__items flex">
+            <div class="main__item">
+                <img src="./img/google-business.jpg" alt="Google Business" />
+                <h3>Интеграция в Google Business</h3>
+                <p>Сертифицированные фотографы Google Street View. Представьте Ваш бизнес через: Google Search и Google Maps.</p>
+
+                <a href="#">Show more</a>
+            </div>
+
+            <div class="main__item">
+                <img src="./img/cross-platform.jpg" alt="Поддержка смартфонов" />
+                <h3>Поддержка смартфонов</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quis ratione ad. Numquam quas voluptatem, voluptatum.</p>
+
+                <a href="#">Show more</a>
+            </div>
+
+            <div class="main__item">
+                <img src="./img/hdr-photos.jpg" alt="Съемка в HDR" />
+                <h3>Съемка в HDR</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, quis ratione ad. Numquam quas voluptatem, voluptatum.</p>
+
+                <a href="#">Show more</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="animation">
+        <div class="animation__items container flex">
+            <div class="animation__item">
+                <h2 id="panoramsCounter"></h2>
+                <p>Снято 3D панорам</p>
+            </div>
+
+            <div class="animation__item">
+                <h2 id="toursCounter"></h2>
+                <p>Собрано виртуальных туров</p>
+            </div>
+
+            <div class="animation__item">
+                <h2 id="clientsCounter"></h2>
+                <p>Довольных клиентов</p>
+            </div>
+
+            <div class="animation__item">
+                <h2 id="yearsCounter"></h2>
+                <p>Лет опыта</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="main container">
+        <div class="main__descriptions">
+            <div class="main__description flex">
+                <div class="main__image">
+                    <img src="./img/google-business-description.jpg" alt="Поддержка смартфонов"  />
+                </div>
+                <div class="main__text">
+                    <h2>Интеграция в Google Business</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam. </p>                    
+                </div>
+            </div>
+
+            <div class="main__description flex">
+                <div class="main__image">
+                    <img src="./img/cross-platform-description.jpg" alt="Поддержка смартфонов"  />
+                </div>
+                <div class="main__text">
+                    <h2>Поддержка смартфонов</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam.</p>
+                </div>
+            </div>
+
+            <div class="main__description flex">
+                <div class="main__image">
+                    <img src="./img/hdr-photos-description4.jpg" alt="Поддержка смартфонов"  />
+                </div>
+                <div class="main__text">
+                    <h2>Съемка в HDR</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique quae mollitia ea voluptatibus ab totam, atque sed at, iure optio dicta praesentium, beatae esse doloremque non delectus tempore, iusto magnam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="main container">
+        <h2 class="price">Стоимость 3D панорам и виртуальных туров</h2>
+
+        <div class="main__items flex">
+            <div class="main__item">
+                <h3 class="price">1-3 панорамы</h3>
+                <h2>600 грн</h2><br>
+                <span>за панораму</span>
+                <br><br>
+                <ul>
+                    <li><br><b>В стоимость входит:</b></li>
+                    <li>Съемка в HDR</li>
+                    <li>Изготовление виртуального 3Д-тура</li>
+                    <li><br><b>Опционально:</b></li>
+                    <li>План помещения</li>
+                    <li>Аудио сопровождение</li>
+                    <li>Фото или всплывающие подсказки</li>
+                </ul>
+
+                <a href="#">Заказать</a>
+            </div>
+
+            <div class="main__item">
+                <h3 class="price">4+ панорам</h3>
+                <h2>500 грн</h2><br>
+                <span>за панораму</span>
+                <br><br>
+                <ul>
+                    <li><br><b>В стоимость входит:</b></li>
+                    <li>Съемка в HDR</li>
+                    <li>Изготовление виртуального 3Д-тура</li>
+                    <li><br><b>Опционально:</b></li>
+                    <li>План помещения</li>
+                    <li>Аудио сопровождение</li>
+                    <li>Фото или всплывающие подсказки</li>
+                    <li>Оформление в фирменном стиле</li>
+                </ul>
+
+                <a href="#">Заказать</a>
+            </div>
+
+            <div class="main__item">
+                <h3 class="price">Фотосъемка интерьера</h3>
+                <h2>от 30 грн</h2><br>
+                <span>за фото</span>
+                <br><br>
+                <ul>
+                    <li><br><b>В стоимость входит:</b></li>
+                    <li>Съемка в HDR</li>
+                    <li>Изготовление виртуального 3Д-тура</li>
+                    <li><br><b>Опционально:</b></li>
+                    <li>План помещения</li>
+                    <li>Аудио сопровождение</li>
+                    <li>Фото или всплывающие подсказки</li>
+                </ul>
+
+                <a href="#">Заказать</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="portfolio container">
+        <h2>Портфолио</h2>
+
+        <div class="portfolio__items flex">
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-3.jpg" alt="Google Business" /></a>
+            </div>
+
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-1.jpg" alt="Поддержка смартфонов" /></a>
+            </div>
+
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-2.jpg" alt="Съемка в HDR" /></a>
+            </div>
+
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-3.jpg" alt="Google Business" /></a>
+            </div>
+
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-1.jpg" alt="Поддержка смартфонов" /></a>
+            </div>
+
+            <div class="portfolio__item">
+                <a href="#"><img src="./img/portfolio/p-2.jpg" alt="Съемка в HDR" /></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="main container">
+        <h2>Наши клиенты</h2>
+
+        <div class="main__items flex clients">
+            <img src="./img/clients/adonis.png" alt="Adonis" />
+            <img src="./img/clients/dommebeli.jpg" alt="Adonis" />
+            <img src="./img/clients/intercom.png" alt="Adonis" />
+            <img src="./img/clients/golden-mandarin2.png" alt="Adonis" />
+        </div>
+    </section>
+
+    <section class="contacts" id="contacts">
+    	<div class="container flex flexstart">
+    		<div class="contacts__left">
+    			<h2>Контакты</h2>
+    			<ul>
+    				<li class="email"><a href="mailto:svit-navkolo@ukr.net">svit-navkolo@ukr.net</a></li>
+    				<li class="phone"><a href="tel:+380504436149">+38 (050) 443-61-49</a></li>
+    				<li class="phone"><a href="tel:+380687896030">+38 (068) 789-60-30</a></li>
+    				<li class="whatsapp"><a title="Отправить сообщение в Whatsapp" href="whatsapp://send?phone=+380504436149">Сообщение в Whatsapp</a></li>
+    				<li class="viber"><a title="Отправить сообщение в Viber" href="viber://chat?number=+380504436149">Сообщение в Viber</a></li>
+    				<li class="skype"><a href="skype:svitnavkolo?chat">svitnavkolo</a></li>
+    			</ul>
+    		</div>
+    
+    		<div class="contacts__right">
+    			<h2>Отправить сообщение</h2>
+    			<div class="messages"></div>
+    			<form action="" method="post">
+    				<input type="text" id="user_name" name="name" placeholder="Ваше имя *">
+    				<input type="text" id="user_phone" name="phone" placeholder="Ваш телефон *">
+    				<input type="text" id="user_email" name="email" placeholder="Ваш e-mail *">			
+    				<textarea id="text_comment" name="message" placeholder="Сообщение *"></textarea>
+    
+    				<input type="button" id="btn_submit" class="contacts__button" name="send" value="Отправить">
+    			</form>
+    		</div>
+    	</div>
+    </section>
+    
+    <!--
+    <div class="footer">
+        <div class="footer__site">
+            <span>zur Bosch Website</span>
+        </div>
+        <div class="footer__bosch">© Robert Bosch Hausgeräte GmbH</div>
+    </div>
+    -->
+</body>
+</html>

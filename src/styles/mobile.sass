@@ -1,0 +1,98 @@
+@media (max-width: 940px)
+	.container
+		width: 100%;
+		margin: 0 auto;
+	.flex
+		justify-content: space-around;
+@media (max-width: 910px)
+	.header
+		&__line
+			background-color: #000;
+		&__container.flex
+			justify-content: space-between;
+		&__container img
+			max-width: 70%;
+			margin-left: 20px;
+		&__nav
+			display: none;
+		&__mobile
+			display: block !important;
+		#header__mobile__open,
+		#header__mobile__close
+			position: absolute;
+			right: 20px;
+			top: 34px;
+			transform: translateY(-55%);
+			display: block;
+			width: 34px;
+			height: 34px;
+			border: 2px solid #c3c3c3;
+			padding: 5px;
+		&__mobile span 
+			display: block;
+			height: 3px;
+			background-color: #fff;
+			margin-top: 3px;
+		#header__mobile__close
+			color: #fff;
+			font-size: 24px;
+			text-decoration: none;
+			text-align: center;
+		#header__mobile__nav
+			position: absolute;
+			top: 48px;
+			left: 0px;
+			width: 100%;
+			text-align: center;
+		#header__mobile__nav ul
+			padding: 0;
+		#header__mobile__nav li
+			display: block;
+			list-style-type: none;
+			line-height: 3em;
+			background-color: #000;
+			border-bottom: 1px solid #2e2e32;
+			margin-right: 0;
+	.main
+		&__description.flex
+			justify-content: center;
+		&__text
+			text-align: left;
+			max-width: 90%;
+			h2
+				display: block;
+				text-align: center;
+  		&__description:nth-child(even) &__image
+			order: 1;
+		&__description:nth-child(odd)
+			text-align: center;
+		h2.price
+			line-height: 1.8em;
+@media (max-width: 500px)
+	.header__description h2,
+	.contacts__right h2
+		font-size: 18px;
+		line-height: 34px;
+	.animation
+		position: static;
+		&__items
+			position: static;
+			transform: none;
+		&__item
+			width: 100%;
+@media (max-width: 600px)
+	.contacts
+		&__left
+			border-right: none;
+			border-bottom: 1px dashed #ccc;
+			ul
+				display: inline-block;
+			li
+				text-align: left;
+		&__left,
+		&__right
+			width: 90%;
+			text-align: center;
+		&__right h2
+			line-height: 3.5em;
+
